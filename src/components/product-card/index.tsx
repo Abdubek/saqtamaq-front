@@ -6,20 +6,21 @@ import Link from "next/link";
 import { useCartStore } from "@/src/store/cart";
 
 type Props = {
+  businessId: number;
   data: any;
 };
 
-export const ProductCard = ({ data }: Props) => {
+export const ProductCard = ({ businessId, data }: Props) => {
   const { items, addToCart, removeFromCart } = useCartStore();
   return (
-    <Link href={`/home/${data.id}`} className="rounded-md shadow">
-      <div className="w-[200px] h-[200px] flex items-center justify-center relative shadow-inner rounded">
+    <Link href={`/home/${businessId}/${data.id}`} className="rounded-md shadow">
+      <div className="w-[175px] h-[175px] flex items-center justify-center relative shadow-inner rounded">
         <SaladIcon width={100} height={100} strokeWidth={1} stroke="gray" />
       </div>
       <div className="p-2 border-t flex flex-col gap-2">
-        <div className="flex items-center justify-between">
-          <h3 className="font-bold text-md">{data.name}</h3>
-          <div className="font-bold">{data.price} ₸</div>
+        <div className="flex items-start justify-between h-[48px]">
+          <h3 className="font-bold text-md line-clamp-2">{data.name}</h3>
+          <div className="font-bold whitespace-nowrap">{data.price} ₸</div>
         </div>
         <p className="text-sm text-gray-500 line-clamp-1">{data.description}</p>
         {!items.some((i) => i.id === data.id) ? (
