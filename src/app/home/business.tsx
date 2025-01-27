@@ -14,20 +14,27 @@ export function Business({ data }: Props) {
       <div className="text-sm capitalize text-gray-500">{data?.location}</div>
       <div className="overflow-x-auto flex py-4 gap-4">
         {data?.items.map((item, index: number) => (
-          <ProductItem key={index} data={item} />
+          <ProductItem key={index} businessId={data.id} data={item} />
         ))}
       </div>
     </>
   );
 }
 
-function ProductItem({ data }: { data: BusinessItem }) {
+function ProductItem({
+  businessId,
+  data,
+}: {
+  businessId: number;
+  data: BusinessItem;
+}) {
   const { items, addToCart, changeQuantity } = useCartStore();
 
   const inCartItem = items.find((item) => item.food_item_id === data.id);
 
   const handleAdd = () => {
     addToCart({
+      business_id: businessId,
       food_item_id: data.id,
       selected_quantity: 1,
       product: data,

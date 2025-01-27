@@ -2,36 +2,47 @@ import {
   IonButton,
   IonContent,
   IonHeader,
+  IonIcon,
+  IonText,
   IonTitle,
   IonToolbar,
   useIonToast,
 } from "@ionic/react";
-import { useCartStore } from "../../stores/cart.ts";
+import { TransactionItem, useCartStore } from "../../stores/cart.ts";
 import { useMutation } from "@tanstack/react-query";
 import { api } from "../../shared/api";
+import { add, remove } from "ionicons/icons";
+import { groupBy } from "../../shared/libs/groupBy.ts";
 
 export function CartPage() {
   const [present] = useIonToast();
   const { items, clearCart } = useCartStore();
 
-  const { mutate } = useMutation({
+  const { mutateAsync } = useMutation({
     mutationFn: api.transactions.createTransaction,
     onSuccess: () => {
-      clearCart();
       present({
         message: "Ваш заказ сделан",
         duration: 3000,
         position: "top",
       });
+      clearCart();
     },
   });
 
   const handleOrder = () => {
-    mutate({
-      business_id: 1,
-      items,
+    const groupedItems = groupBy(items, (item) => item.business_id);
+    Object.entries(groupedItems).forEach(([id, items]) => {
+      mutateAsync({
+        business_id: Number(id),
+        items,
+      });
     });
   };
+
+  const total = items.reduce((totalPrice, item) => {
+    return totalPrice + Number(item.product.price) * item.selected_quantity;
+  }, 0);
 
   return (
     <>
@@ -44,21 +55,12 @@ export function CartPage() {
       <IonContent className="ion-padding">
         <div className="flex flex-col justify-between h-full">
           <div>
+            <div className="flex justify-between">
+              <div className="font-bold">Общий: </div>
+              <div>{total} тг</div>
+            </div>
             {items.map((item, index) => (
-              <div key={index} className="py-4 flex justify-between">
-                <span>
-                  {index + 1}. {item.product.name}
-                </span>
-                <div>
-                  <span className="font-bold">
-                    {Number(item.product.price) * item.selected_quantity} тг.
-                  </span>
-                  &nbsp;
-                  <span className="text-xs">
-                    ({item.selected_quantity} шт.)
-                  </span>
-                </div>
-              </div>
+              <CartItem key={index} data={item} />
             ))}
           </div>
 
@@ -68,5 +70,69 @@ export function CartPage() {
         </div>
       </IonContent>
     </>
+  );
+}
+
+function CartItem({ data }: { data: TransactionItem }) {
+  const { items, changeQuantity } = useCartStore();
+
+  const inCartItem = items.find(
+    (item) => item.food_item_id === data.food_item_id,
+  );
+
+  return (
+    <div className="py-4 flex justify-between">
+      <div>
+        <div>{data.product.name}</div>
+        <span className="font-bold">
+          {Number(data.product.price) * data.selected_quantity} тг.
+        </span>
+      </div>
+      {inCartItem && (
+        <div className="flex gap-2 items-center">
+          <IonButton
+            mode="ios"
+            size="small"
+            fill="outline"
+            slot="end"
+            aria-label="Remove"
+            onClick={() => {
+              changeQuantity(
+                data.food_item_id,
+                inCartItem.selected_quantity - 1,
+              );
+            }}
+          >
+            <IonIcon
+              mode="ios"
+              slot="icon-only"
+              icon={remove}
+              aria-hidden="true"
+            />
+          </IonButton>
+          <IonText>{inCartItem.selected_quantity} шт.</IonText>
+          <IonButton
+            mode="ios"
+            size="small"
+            fill="outline"
+            slot="end"
+            aria-label="Add"
+            onClick={() => {
+              changeQuantity(
+                data.food_item_id,
+                inCartItem.selected_quantity + 1,
+              );
+            }}
+          >
+            <IonIcon
+              mode="ios"
+              slot="icon-only"
+              icon={add}
+              aria-hidden="true"
+            />
+          </IonButton>
+        </div>
+      )}
+    </div>
   );
 }

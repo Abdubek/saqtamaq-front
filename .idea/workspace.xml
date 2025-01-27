@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de30f698-5894-49d5-9103-9a47692cb964" name="Changes" comment="" />
+    <list default="true" id="de30f698-5894-49d5-9103-9a47692cb964" name="Changes" comment="change project">
+      <change afterPath="$PROJECT_DIR$/src/shared/libs/groupBy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cart/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cart/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/business.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/business.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/api/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/api/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stores/cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/cart.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +27,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Abdubek"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Abdubek/saqtamaq-front.git",
+    "accountId": "0c76f209-180a-467e-a69f-c9feb0f49509"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 1
 }]]></component>
@@ -29,6 +53,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/abdubekzholay/Workspace/saqtamaq-all/saqtamaq-app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -73,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -93,11 +118,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737783985807</updated>
-      <workItem from="1737783986982" duration="25420000" />
+      <workItem from="1737783986982" duration="27148000" />
     </task>
+    <task id="LOCAL-00001" summary="change project">
+      <option name="closed" value="true" />
+      <created>1737969969418</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737969969418</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change project" />
+    <option name="LAST_COMMIT_MESSAGE" value="change project" />
   </component>
 </project>

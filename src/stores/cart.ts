@@ -1,7 +1,8 @@
 import { create } from "zustand";
 import { BusinessItem } from "../shared/api/business.ts";
 
-interface TransactionItem {
+export interface TransactionItem {
+  business_id: number;
   food_item_id: number;
   selected_quantity: number;
   product: BusinessItem;
