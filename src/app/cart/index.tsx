@@ -53,21 +53,35 @@ export function CartPage() {
       </IonHeader>
 
       <IonContent className="ion-padding">
-        <div className="flex flex-col justify-between h-full">
-          <div>
-            <div className="flex justify-between">
-              <div className="font-bold">Общий: </div>
-              <div>{total} тг</div>
+        {items.length ? (
+          <div className="flex flex-col justify-between h-full">
+            <div>
+              <div className="flex justify-between">
+                <div className="font-bold">Общий: </div>
+                <div>{total} тг</div>
+              </div>
+              {items.map((item, index) => (
+                <CartItem key={index} data={item} />
+              ))}
             </div>
-            {items.map((item, index) => (
-              <CartItem key={index} data={item} />
-            ))}
-          </div>
 
-          <IonButton mode="ios" className="w-full" onClick={handleOrder}>
-            Заказать
-          </IonButton>
-        </div>
+            <IonButton mode="ios" className="w-full" onClick={handleOrder}>
+              Заказать
+            </IonButton>
+          </div>
+        ) : (
+          <div className="h-full flex flex-col text-center items-center justify-center">
+            <IonText>
+              <h2>Ваша корзина пуста</h2>
+            </IonText>
+            <IonText>
+              <span className="text-gray-500 text-sm mt-3 block">
+                Похоже, вы еще ничего не добавили в корзину. Начните с главной
+                страницы, чтобы найти то, что вам понравится.
+              </span>
+            </IonText>
+          </div>
+        )}
       </IonContent>
     </>
   );

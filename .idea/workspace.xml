@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de30f698-5894-49d5-9103-9a47692cb964" name="Changes" comment="add multiple create transactions">
+    <list default="true" id="de30f698-5894-49d5-9103-9a47692cb964" name="Changes" comment="fix orders date">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/orders/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/orders/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cart/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cart/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737783985807</updated>
-      <workItem from="1737783986982" duration="27348000" />
+      <workItem from="1737783986982" duration="27589000" />
     </task>
     <task id="LOCAL-00001" summary="change project">
       <option name="closed" value="true" />
@@ -132,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737972357390</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix orders date">
+      <option name="closed" value="true" />
+      <created>1737972566103</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737972566103</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change project" />
     <MESSAGE value="add multiple create transactions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add multiple create transactions" />
+    <MESSAGE value="fix orders date" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix orders date" />
   </component>
 </project>
