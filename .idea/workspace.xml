@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de30f698-5894-49d5-9103-9a47692cb964" name="Changes" comment="change project">
-      <change afterPath="$PROJECT_DIR$/src/shared/libs/groupBy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" />
+    <list default="true" id="de30f698-5894-49d5-9103-9a47692cb964" name="Changes" comment="add multiple create transactions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cart/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/cart/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/business.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/business.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/api/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/api/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/cart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/orders/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/orders/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737783985807</updated>
-      <workItem from="1737783986982" duration="27148000" />
+      <workItem from="1737783986982" duration="27348000" />
     </task>
     <task id="LOCAL-00001" summary="change project">
       <option name="closed" value="true" />
@@ -128,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737969969418</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add multiple create transactions">
+      <option name="closed" value="true" />
+      <created>1737972357390</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737972357390</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change project" />
-    <option name="LAST_COMMIT_MESSAGE" value="change project" />
+    <MESSAGE value="add multiple create transactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add multiple create transactions" />
   </component>
 </project>
